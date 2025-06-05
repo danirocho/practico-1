@@ -1,0 +1,96 @@
+.caja{
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/*---------------------------------------------------------------*/
+.header{
+    font-size: 30px;
+    background-color: #05299E;
+    border: 2px saddlebrown;
+    height: 120px;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+/*---------------------------------------------------------------*/
+.nav{
+    
+    background-color: #5E4AE3;
+    border: 2px rgb(221, 135, 73);
+    height: 100px;
+    grid-column: 1 / 5;
+}
+/* color de las letras de los enlaces*/
+.color{
+    color: blue;
+}
+/* color que cambia a colocar el culsor en los links*/
+.color:hover{ color: red;}
+
+.lista-horizontal{
+    font-size: 20px;
+    list-style: none;
+    padding: 10;
+    margin: 10;
+    border: 1px;
+    border-radius: 10px;
+    background-color: #5E4AE3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.lista-horizontal li {
+  padding: 20px 100px;
+ 
+  flex-grow: 0; 
+}
+.lista-horizontal li a {
+  text-decoration: none;
+}
+/*---------------------------------------------------------------*/
+.section{
+    background-color: #F0E2E7;
+    border: 2px saddlebrown;
+    height: 1500px;
+    grid-column: 1 / 5;
+}
+
+.tamañodeimagen{
+    height: 200px;
+}
+/*---------------------------------------------------------------*/
+.footer{
+    font-size: 20px;
+     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    background-color: #777f82;
+    border: 2px saddlebrown;
+    height: 200px;
+    grid-column: 1 / 5;
+}
+
+
+
+
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "section section"
+    "footer footer";
+    grid-template-columns:3fr 1fr;
+} 
+
+
+.site-header{
+    background: #00ffff;
+    color: rgb(161, 20, 20);
+    text-align: center;
+    padding: 1rem;
+    background-color: antiquewhite;
+}
