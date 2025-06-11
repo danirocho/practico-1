@@ -1,0 +1,22 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.letra{
+    font-size:auto;
+}
+
+.grupo{
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+input, select, textarea, button {
+    display: block;
+}
+
+.escondido{
+    display: none;
+}

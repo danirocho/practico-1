@@ -1,10 +1,15 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   }
+
+/* clase que utilizo para darle propiedades a header-nav-section-footer*/
 .caja{
     margin: 10px;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-/*---------------------------------------------------------------*/
+/*----------------el encabezado-----------------------------------------------*/
 .header{
     font-size: 30px;
     background-color: #05299E;
@@ -13,12 +18,12 @@
     grid-column: 1 / 5;
     text-align: center;
 }
-/*---------------------------------------------------------------*/
+/*---------------------partes del navegador y enlaces de la página------------------------------------------*/
 .nav{
     
     background-color: #5E4AE3;
     border: 2px rgb(221, 135, 73);
-    height: 100px;
+    height: 350px;
     grid-column: 1 / 5;
 }
 /* color de las letras de los enlaces*/
@@ -29,37 +34,65 @@
 .color:hover{ color: red;}
 
 .lista-horizontal{
-    font-size: 20px;
+    font-size: 24px;
     list-style: none;
-    padding: 10;
-    margin: 10;
+    padding: 0;
+    margin: 0;
     border: 1px;
     border-radius: 10px;
     background-color: #5E4AE3;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
 }
 .lista-horizontal li {
-  padding: 20px 100px;
+  padding: 10px 40px;
  
   flex-grow: 0; 
 }
 .lista-horizontal li a {
   text-decoration: none;
+  color: white;
+  padding: 10px 15px;
 }
-/*---------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+    .lista-horizontal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .lista-horizontal li {
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .section{
+        height: auto;
+    }
+}
+/*----------------cuerpo-----------------------------------------------*/
 .section{
     background-color: #F0E2E7;
     border: 2px saddlebrown;
-    height: 1500px;
+    height: 2000px;
     grid-column: 1 / 5;
 }
 
 .tamañodeimagen{
-    height: 200px;
+    width: 200px;
+    height: auto;
+    margin:5px;
 }
-/*---------------------------------------------------------------*/
+/*---------pie de página------------------------------------------------------*/
 .footer{
     font-size: 20px;
      align-items: center;
@@ -75,7 +108,7 @@
 
 
 
-
+/*---------------------------sacado de una de las clases------------------------------------*/
 .container{
     display: grid;
     grid-template-areas: 
