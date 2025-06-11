@@ -1,5 +1,5 @@
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Libre Baskerville", sans-serif;
    }
 
 /* clase que utilizo para darle propiedades a header-nav-section-footer*/
@@ -11,19 +11,19 @@ body{
 }
 /*----------------el encabezado-----------------------------------------------*/
 .header{
+    width: 100%;
     font-size: 30px;
     background-color: #05299E;
-    border: 2px saddlebrown;
+    border: 2px solid rgb(73, 90, 167);
     height: 120px;
     grid-column: 1 / 5;
     text-align: center;
 }
 /*---------------------partes del navegador y enlaces de la página------------------------------------------*/
 .nav{
-    
+    min-height: 100px;
     background-color: #5E4AE3;
     border: 2px rgb(221, 135, 73);
-    height: 350px;
     grid-column: 1 / 5;
 }
 /* color de las letras de los enlaces*/
@@ -31,14 +31,16 @@ body{
     color: blue;
 }
 /* color que cambia a colocar el culsor en los links*/
-.color:hover{ color: red;}
+.color:hover{ 
+    color: red;
+    text-decoration: underline;
+}
 
 .lista-horizontal{
     font-size: 24px;
     list-style: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
-    border: 1px;
     border-radius: 10px;
     background-color: #5E4AE3;
     display: flex;
@@ -48,15 +50,16 @@ body{
     flex-wrap: wrap;
     
 }
-.lista-horizontal li {
+/* class dedicacado a los elementos de la lista*/
+.lista-horizontal li {  
   padding: 10px 40px;
- 
+  border: 1px solid #ccc;
   flex-grow: 0; 
 }
 .lista-horizontal li a {
   text-decoration: none;
   color: white;
-  padding: 10px 15px;
+  padding: 1px 10px;
 }
 
 @media (max-width: 600px) {
@@ -81,9 +84,11 @@ body{
 }
 /*----------------cuerpo-----------------------------------------------*/
 .section{
-    background-color: #F0E2E7;
+    background-color: #49409e;
     border: 2px saddlebrown;
     height: 2000px;
+    min-height: 500px;
+    margin-top: 20px;
     grid-column: 1 / 5;
 }
 
@@ -91,6 +96,9 @@ body{
     width: 200px;
     height: auto;
     margin:5px;
+    padding: 1rem;
+    border: #7a1992;
+    background-color: rgb(71, 97, 153);
 }
 /*---------pie de página------------------------------------------------------*/
 .footer{
@@ -99,31 +107,8 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 20px 100px;
-    background-color: #777f82;
-    border: 2px saddlebrown;
+    background-color: #445358;;
+    border: 4px solid rgb(58, 49, 43);
     height: 200px;
     grid-column: 1 / 5;
-}
-
-
-
-
-/*---------------------------sacado de una de las clases------------------------------------*/
-.container{
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "section section"
-    "footer footer";
-    grid-template-columns:3fr 1fr;
-} 
-
-
-.site-header{
-    background: #00ffff;
-    color: rgb(161, 20, 20);
-    text-align: center;
-    padding: 1rem;
-    background-color: antiquewhite;
 }

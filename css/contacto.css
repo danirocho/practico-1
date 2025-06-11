@@ -1,10 +1,9 @@
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 0 auto;
-    max-width: 600px;
+    font-family: "Libre Baskerville", sans-serif;
+   
 }
 .letra{
-    font-size:auto;
+    font: size 16px;;
 }
 
 .grupo{

@@ -4,25 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>¿Tenés alguna duda? ¿Querés saber cuál auricular te conviene?
-Sea lo que sea, estamos para escucharte.</h1>
-
-<p>te invitamos a contactarnos para mas información</p>
-<form action="">
-    <div class="grupo"><label for="nombre" class="letra">Nombre</label>
-    <input type="text" id="nombre" name="nombre">
-    </div>
-    <div class="grupo">
-        <label for="apellido" class="letra">Apellido</label>
-    <input type="text" id="apellido" name="apellido">
-    </div>
-    <div class="grupo">
-    <label for="email" class="letra">correo electronico</label>
-    <input type="email" id="email" name="email">
-    </div>
+     <div class="caja">
+        <header class="header">
+            <h1>SOUNDTHEART</h1>
+        </header>
+        <nav class="nav">
+             <ul class="lista-horizontal">
+                <li><a class= "color" href="home.html">HOME</a></li>
+                <li><a class= "color" href="clientes.html">CLIENTES</a></li>
+                <li><a class= "color" href="contacto.html">CONTACTANOS</a></li>
+                <li><a class= "color" href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div >
+            <h1>¿Tenés alguna duda? ¿Querés saber cuál auricular te conviene?
+            Sea lo que sea, estamos para escucharte.</h1>
+        </div>
+        <div >
+        <p>te invitamos a contactarnos para mas información</p>
+        </div>
+    <div>
+    <form action="">
+        <div class="grupo"><label for="nombre" class="letra">Nombre</label>
+         <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="grupo">
+         <label for="apellido" class="letra">Apellido</label>
+        <input type="text" id="apellido" name="apellido">
+        </div>
+        <div class="grupo">
+             <label for="email" class="letra">correo electronico</label>
+            <input type="email" id="email" name="email">
+        </div>
     <div class="grupo" >
     <label for="opciones">como te enteraste de nuestra empresa</label>
     <select name="opciones" id="bloquetema">
@@ -33,29 +54,46 @@ Sea lo que sea, estamos para escucharte.</h1>
     </select>   
     </div>
     <div class="grupo escondido" id="bloqueotrotema">
-    <label for="otro">Especifique</label>
-    <textarea id="otro"></textarea>
+        <label for="otro">Especifique</label>
+         <textarea id="otro"></textarea>
+    </div>
     </div>
 
-    <button type="submit" id="enviar">enviar</button>
+        <button type="submit" id="enviar">enviar</button>
+        <p id="mensaje" style="display: none;color:green;">mensaje enviado</p>
+        <footer class="footer">
+            <p>Términos y condiciones</p>
+            <p>Política de Privacidad</p>
+            <p>Política de Cookies</p>
+            
+        
+    
+    </footer>
+    <script>
+    const formulario = document.querySelector("form");
+    const mensaje = document.getElementById("mensaje");
+
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault(); // evita que se recargue la página
+        mensaje.style.display = "block"; // muestra el mensaje
+    });
+    </script>
 
 
 
-<a class= color href="principal.html">página principal</a>
 
+    <script>
+    const bloquetema = document.getElementById("bloquetema");
+    const bloqueotrotema = document.getElementById("bloqueotrotema");
 
-<script>
-  const bloquetema = document.getElementById("bloquetema");
-  const bloqueotrotema = document.getElementById("bloqueotrotema");
-
-  bloquetema.addEventListener("change", function() {
-      const op = this.value;
-      if (op === "otro") {
-          bloqueotrotema.classList.remove("escondido");
-      } else {
-          bloqueotrotema.classList.add("escondido");
+    bloquetema.addEventListener("change", function() {
+        const op = this.value;
+        if (op === "otro") {
+           bloqueotrotema.classList.remove("escondido");
+         } else {
+            bloqueotrotema.classList.add("escondido");
       }
   });
-</script>
+    </script>
 </body>
 </html>
